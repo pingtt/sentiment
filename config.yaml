@@ -1,0 +1,30 @@
+---
+setting:
+  batch_size: 16
+  source_time_step: 40
+  target_time_step: 6
+  model: model/multisource
+  checkpoint: 1000
+  max_epochs: 8
+  hypothesis: predict.hyp
+  accuracy_plot: accuracy_plot.png
+  loss_plot: loss_plot.png
+  embedding_format: word2vec
+  source_embedding: vectors3.txt
+  target_embedding: vectors3.txt
+  verbose: 1
+train:
+  source: train.txt
+  target: train.att
+  label: train.lbl
+test:
+  source: test.txt
+  target: test.att
+  label: test.lbl
+validation:
+  source: valid.txt
+  target: valid.att
+  label: valid.lbl
+ensemble:
+  - /aaa/
+  - /bbb/
